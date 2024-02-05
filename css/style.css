@@ -692,7 +692,7 @@ pre {
   /* margin-left: 2rem; */
 }
 
-.overflow {
+.overflowTag {
   overflow: auto;
   display: flex;
   justify-content: center;
