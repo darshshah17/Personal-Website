@@ -45,7 +45,9 @@ if (isset($_POST['Email'])) {
     }
 
     if (strlen($error_message) > 0) {
-        problem($error_message);
+        if (strlen($error_message) > 0) {
+            echo 'There were some errors with your submission. Please fix them and try again.';
+        }
     }
 
     $email_message = "Form details below.\n\n";
@@ -67,9 +69,7 @@ if (isset($_POST['Email'])) {
     @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
-    <!-- include your success message below -->
-
-    Thank you for contacting us. We will be in touch with you very soon.
+echo '<div id="success-message">Thank you for contacting us. We will be in touch with you very soon.</div>';
 
 <?php
 }
