@@ -687,9 +687,8 @@ pre {
       max-width: 1140px; } }
 
 .home-photo-container {
-  margin: auto;
-  /* margin-right: 0.5rem; */
-  /* margin-left: 2rem; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .overflowTag {
