@@ -4,6 +4,21 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ .hover-underline {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Keep text color same as surrounding text */
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.list-unstyled li a:hover {
+  color: white !important;
+}
+
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8962,7 +8977,7 @@ h1, h2, h3, h4, h5,
     .btn.btn-primary:hover {
       border: 1px solid #6464ff !important;
       background: #6464ff !important;
-      color: #000000 !important; }
+      color: white !important; }
     .btn.btn-primary.btn-outline-primary {
       border: 2px solid #6464ff !important;
       background: transparent !important;
