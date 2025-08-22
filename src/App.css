@@ -39,9 +39,9 @@ body.dark .contact-button {
   color: #e2e2e2;
 }
 body.dark .contact-button:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #ffffff;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #111111;
 }
 body.dark .work-tag, body.dark .project-tag, body.dark .skill-item {
   background-color: #2a2a2a;
@@ -81,9 +81,9 @@ body.light .contact-button {
   background-color: transparent;
 }
 body.light .contact-button:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #fff;
+  background-color: #111111;
+  border-color: #111111;
+  color: #ffffff;
 }
 body.light .work-tag, body.light .project-tag, body.light .skill-item {
   background-color: #eee;
