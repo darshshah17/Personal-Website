@@ -326,6 +326,25 @@ body.light .project-item a:hover p {
   font-size: 0.9rem;
 }
 
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+body.dark .footer {
+  border-color: #444444;
+  color: #888888;
+}
+
+body.light .footer {
+  border-color: #ddd;
+  color: #555555;
+}
+
 @media (max-width: 768px) {
   #root {
     padding: 2rem 1rem;
