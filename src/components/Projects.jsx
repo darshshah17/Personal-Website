@@ -10,7 +10,7 @@ const Projects = () => {
     },
     {
       name: "Vibe",
-      description: "An AI-powered music recommendation platform based on mood.",
+      description: "An audio-based mood detection platform that provides AI-powered music recommendation.",
       tags: ["Python", "React", "Flask", "TensorFlow", "Spotify API", "OAuth 2.0"],
       link: "https://github.com/darshshah17/vibe" // Update with actual project link
     }

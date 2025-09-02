@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>Made by Darsh • Last updated {lastUpdated}</p>
+      <p>Made by Darsh • Accurate as of Aug 21, 2025</p>
     </footer>
   );
 };
