@@ -4,7 +4,6 @@ import './App.css';
 import About from './components/About';
 import Work from './components/Work';
 import Projects from './components/Projects';
-// import Skills from './components/Skills';
 import ThemeToggle from './components/ThemeToggle';
 import Footer from './components/Footer';
 
@@ -24,7 +23,6 @@ function App() {
       <main>
         <About />
         <Work />
-        {/* <Skills /> */}
         <Projects />
       </main>
       <Footer />
