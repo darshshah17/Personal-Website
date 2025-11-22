@@ -3,16 +3,28 @@ import React from 'react';
 const Projects = () => {
   const projectList = [
     {
-      name: "Wealthsimple Generations",
-      description: "A long-term wealth management platform for high-value clients (Hackathon Winner).",
-      tags: ["React", "Node.js", "Python", "TensorFlow", "SQL"],
-      link: "https://github.com/mfoltak/hacksimple" // Update with actual project link
+      name: "Stratego",
+      date: "Aug 2025",
+      tags: ["C++", "MVC", "Multithreading", "Design Patterns"],
+      link: "https://github.com/KrishM123/247-raiinet"
+    },
+    {
+      name: "Polymarket Clone",
+      date: "May 2025 – Jul 2025",
+      tags: ["Python", "Flask", "React", "MySQL", "TypeScript"],
+      link: "https://github.com/KrishM123/348-polymarket"
     },
     {
       name: "Vibe",
-      description: "An audio-based mood detection platform that provides AI-powered music recommendations.",
-      tags: ["Python", "React", "Flask", "TensorFlow", "Spotify API", "OAuth 2.0"],
-      link: "https://github.com/darshshah17/vibe" // Update with actual project link
+      date: "Apr 2025",
+      tags: ["Python", "Flask", "TensorFlow", "Spotify API", "OAuth 2.0", "React"],
+      link: "https://github.com/darshshah17/vibe"
+    },
+    {
+      name: "Wealthsimple Generations",
+      date: "Apr 2025",
+      tags: ["TypeScript", "React", "Python", "Node.js"],
+      link: "https://github.com/mfoltak/hacksimple"
     }
   ];
 
@@ -22,17 +34,15 @@ const Projects = () => {
       <div className="project-list">
         {projectList.map((project, index) => (
           <div key={index} className="project-item">
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <div className="work-header">
-                <h3>{project.name}</h3>
-              </div>
-              <p>{project.description}</p>
-              <div className="project-tags">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="project-tag">{tag}</span>
-                ))}
-              </div>
-            </a>
+            <div className="work-header">
+              <h3>{project.name}</h3>
+              {project.date && <span className="work-period">{project.date}</span>}
+            </div>
+            {project.link && project.link !== "#" && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                View on GitHub →
+              </a>
+            )}
           </div>
         ))}
       </div>
