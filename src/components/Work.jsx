@@ -1,8 +1,20 @@
 import React, { useState } from 'react';
 
-const CompanyLogo = ({ company, logoUrl }) => {
+const CompanyLogo = ({ company, logoPath }) => {
   const [logoError, setLogoError] = useState(false);
+  
   const getInitials = (name) => {
+    // Special cases for specific companies
+    const specialCases = {
+      'Wealthsimple': 'WS',
+      'Canadian Space Agency': 'CSA'
+    };
+    
+    if (specialCases[name]) {
+      return specialCases[name];
+    }
+    
+    // Default logic: use first letter of first and last word
     const words = name.split(' ');
     if (words.length >= 2) {
       return (words[0][0] + words[words.length - 1][0]).toUpperCase();
@@ -10,7 +22,7 @@ const CompanyLogo = ({ company, logoUrl }) => {
     return name.substring(0, 2).toUpperCase();
   };
 
-  if (logoError || !logoUrl) {
+  if (logoError || !logoPath) {
     return (
       <div className="company-logo-fallback">
         {getInitials(company)}
@@ -20,7 +32,7 @@ const CompanyLogo = ({ company, logoUrl }) => {
 
   return (
     <img 
-      src={logoUrl} 
+      src={logoPath} 
       alt={`${company} logo`} 
       className="company-logo"
       onError={() => setLogoError(true)}
@@ -37,7 +49,7 @@ const Work = () => {
       duration: "3 mos",
       team: "Managed Investing 💵",
       skills: ["TypeScript", "Ruby on Rails", "PostgreSQL", "GraphQL", "Python"],
-      logo: "https://logo.clearbit.com/wealthsimple.com"
+      logo: "/Wealthsimple.png"
     },
     {
       company: "Wealthsimple",
@@ -46,7 +58,7 @@ const Work = () => {
       duration: "4 mos",
       team: "Crypto 🪙",
       skills: ["PostgreSQL", "Apache Airflow", "Data Build Tool (DBT)", "Ruby", "Python"],
-      logo: "https://logo.clearbit.com/wealthsimple.com"
+      logo: "/Wealthsimple.png"
     },
     {
       company: "Canadian Space Agency",
@@ -55,7 +67,7 @@ const Work = () => {
       duration: "4 mos",
       team: "Cost Estimation 💰",
       skills: ["C++", "Python"],
-      logo: "https://logo.clearbit.com/asc-csa.gc.ca"
+      logo: "/CSA.png"
     }
   ];
 
@@ -66,7 +78,7 @@ const Work = () => {
         {workExperience.map((job, index) => (
           <div key={index} className="work-item">
             <div className="work-header-with-logo">
-              <CompanyLogo company={job.company} logoUrl={job.logo} />
+              <CompanyLogo company={job.company} logoPath={job.logo} />
               <div className="work-header-content">
                 <p className="work-role">{job.role}</p>
                 <h3>{job.company}</h3>
